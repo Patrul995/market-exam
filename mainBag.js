@@ -101,7 +101,7 @@ document.getElementById('form').addEventListener('submit', (ev) => {
         customerInfo[item[0]] = item[1];
     });
 
-    let obj = localStorage.getItem('cart');
+    let obj = JSON.parse(localStorage.getItem('cart'));
     let customerName = customerInfo.customerName;
 
     const requestBody = JSON.stringify({
